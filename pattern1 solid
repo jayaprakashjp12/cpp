@@ -28,6 +28,7 @@ solid_rectangle(rows, columns);
 return 0;
 }
 //
+ 
 #include <iostream>
 #include <stack>
 #include <stdlib.h>
@@ -88,14 +89,13 @@ void convexhull(point p[],int t)
           minx.x=p[i].x;
           minx.y=p[i].y;flag=i;}
     }
-      cout <<flag<<endl;
+
   p0=minx;
   swap(p[0],p[flag]);
-   cout<<p[0].x<<p[0].y<<endl;
-   cout<<p[flag].x<<p[flag].y<<endl;
+
   qsort(&p[1],t-1,sizeof(point),compare);
 
-/*  int m = 1; // Initialize size of modified array
+  int m = 1; // Initialize size of modified array
    for (int i=1; i<t; i++)
    {
        // Keep removing i while angle of i and i+1 is same
@@ -108,7 +108,7 @@ void convexhull(point p[],int t)
        p[m] = p[i];
        m++;  // Update size of modified array
    }
-cout<<m;
+
    // If modified array of points has less than 3 points,
    // convex hull is not possible
    if (m < 3) return;
@@ -149,8 +149,8 @@ j++;
 
 
   }
-*/*/
-for(int k=0;k<t;k++){cout<<p[k].x<<" "<<p[k].y<<endl;}
+*/
+ 
 
 
 
